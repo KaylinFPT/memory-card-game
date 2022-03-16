@@ -1,0 +1,14 @@
+<div class="playerBanner">
+    <div class="container">
+        <img src="{{imgSrc}}" width="250px" height="250px" class="responsiveImg">
+        <h1>{{playerName}}</h1>
+        <h1>Score: {{score}}</h1>
+        
+    </div>
+    <div *ngIf="PlayerOneTurn" class="playerTurn">
+        <mat-card style="background-color: rgb(72, 189, 26); margin: 10px; border-radius: 15px;">
+            <h2 >Its your turn!</h2>
+        </mat-card>
+    </div>
+    </div>
+    

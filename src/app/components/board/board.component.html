@@ -1,0 +1,49 @@
+<div class="container">
+
+    <div style="width:100%">
+      <button class="btn" (click)="restart()" mat-raised-button style="background-color: orange;">Restart Game</button>
+      <button class="btn" routerLink="/" mat-raised-button color="warn">Exit Game</button>
+    </div>
+  
+  
+    <div *ngIf="!deviceXs" class="row">
+      <div class="column left">
+        <app-score-board [playerName]="PlayerOneName" [score]="PlayerOneScore" [PlayerOneTurn]="this.match.playerOneTurn" [imgSrc]="playerOneImg"></app-score-board>  
+  
+      </div>
+      <div class="column middle" >
+          
+        <div class="grid p-16">
+          <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+          </app-game-card>
+        </div>
+        
+  
+      </div>
+      <div class="column right" >
+          <app-score-board [playerName]="PlayerTwoName" [score]="PlayerTwoScore" [PlayerOneTurn]="!this.match.playerOneTurn" [imgSrc]="playerTwoImg"></app-score-board>
+      </div>
+  </div>
+  
+  
+  <div *ngIf="deviceXs" fxLayout="column" fxLayoutAlign="space-between center">
+     
+      <div fxLayout="row">
+      <div  class="grid p-16">
+        <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+        </app-game-card>
+      </div>
+    </div>
+  
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" >
+      <app-score-board-sm [playerName]="PlayerOneName" [score]="PlayerOneScore" [PlayerOneTurn]="this.match.playerOneTurn" [imgSrc]="playerOneImg"></app-score-board-sm>
+      <app-score-board-sm [playerName]="PlayerTwoName" [score]="PlayerTwoScore" [PlayerOneTurn]="!this.match.playerOneTurn" [imgSrc]="playerTwoImg"></app-score-board-sm>
+    </div>
+  
+  
+      
+    
+  </div>
+  </div>
+  
+  

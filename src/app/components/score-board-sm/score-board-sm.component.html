@@ -1,0 +1,14 @@
+<div fxLayout="row" class="container" fxLayoutAlign="space-around center" >
+        <img src="{{imgSrc}}" width="250px" height="250px" class="responsiveImg">
+        <h2>{{playerName}}</h2>
+        <h2>Score: {{score}}</h2>
+        
+        <div *ngIf="PlayerOneTurn" >
+            
+                <p style="background-color: rgb(72, 189, 26);;">!</p>
+            
+        </div>
+        
+    </div>
+    
+
