@@ -19,6 +19,8 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { BoardComponent } from './components/board/board.component';
 import { ScoreBoardComponent } from './components/score-board/score-board.component';
 import { ScoreBoardSmComponent } from './components/score-board-sm/score-board-sm.component';
+import { RestartDialogComponent } from './components/restart-dialog/restart-dialog.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -30,7 +32,8 @@ import { ScoreBoardSmComponent } from './components/score-board-sm/score-board-s
     PopUpComponent,
     BoardComponent,
     ScoreBoardComponent,
-    ScoreBoardSmComponent
+    ScoreBoardSmComponent,
+    RestartDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { ScoreBoardSmComponent } from './components/score-board-sm/score-board-s
     MatIconModule,
     MatDialogModule,
     MatInputModule,FlexLayoutModule ,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

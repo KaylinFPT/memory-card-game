@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Congratulations!</h1>
+
+<mat-dialog-content  class="full-width mat-typography">
+    <img src="../../../assets/chimp.png" width="250px" height="250px" class="responsiveImg">
+    <h2>{{data.player}} has won the match!</h2>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Play Again?</button>
+</mat-dialog-actions>
+
+

@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { faRocket } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-score-board-sm',
@@ -15,6 +16,7 @@ export class ScoreBoardSmComponent implements OnInit {
 
   subscription!: Subscription;
 
+  faRocket = faRocket;
   constructor() { }
 
   ngOnInit(): void {
