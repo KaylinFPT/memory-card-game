@@ -1,0 +1,17 @@
+<form class="form">
+    <h2 mat-dialog-title>Enter Names</h2> 
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Player One</mat-label>
+        <input matInput placeholder="Ex. Tony Stark" name="playerOne" [(ngModel)]="data.name"  required>
+      </mat-form-field>
+  
+      <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Player Two</mat-label>
+          <input matInput placeholder="Ex. Thor Odinson" name="playerTwo" [(ngModel)]="data.name2" required>
+        </mat-form-field>
+  
+        <button  mat-raised-button color="primary" [disabled]="!data.name || !data.name2" [mat-dialog-close]="(data.name + ',' +  data.name2)" >Ready!</button>
+    
+       
+      
+    </form>

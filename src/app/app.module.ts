@@ -14,19 +14,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameCardComponent
+    GameCardComponent,
+    MenuComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    MatToolbarModule,
+    MatButtonModule,MatCardModule,
+    MatIconModule,
+    MatDialogModule,
+    MatInputModule,FlexLayoutModule ,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
