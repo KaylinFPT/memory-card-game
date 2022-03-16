@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatchService } from 'src/app/services/match.service'; 
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
+import { RestartDialogComponent } from '../restart-dialog/restart-dialog.component';
 
 
 @Component({
@@ -213,7 +214,16 @@ checkForCardMatch(): void {
     if (nextState === 'matched') {
       this.matchedCount++;
 
-      
+      if (this.matchedCount === 27) {
+        const dialogRef = this.dialog.open(RestartDialogComponent, {
+          disableClose: true,
+          data: {player : this.PlayerOneScore > this.PlayerTwoScore ? this.PlayerOneName : this.PlayerTwoName}
+        });
+
+        dialogRef.afterClosed().subscribe(() => {
+          this.restart();
+        });
+      }
     }
 
   }, 1200);}
