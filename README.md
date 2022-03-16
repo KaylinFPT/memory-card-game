@@ -1,5 +1,11 @@
 # MemoryCardGame
 
+![image](https://user-images.githubusercontent.com/83064592/158536266-b318631e-8cf8-411c-8841-e2bdd5854b8f.png)
+
+
+![image](https://user-images.githubusercontent.com/83064592/158536141-292bdd56-bd40-4e0c-8c36-fea090ab3fbb.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
 
 ## Development server
